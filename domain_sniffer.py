@@ -55,16 +55,17 @@ try:
         return good_urls
 
     def save_domains(filepath, good_urls):
-        with open(filepath, 'w') as file:
-            for e in good_urls:
-                file.write(e + '\n')
+        if filepath is not None:
+            with open(filepath, 'w') as file:
+                for e in good_urls:
+                    file.write(e + '\n')
 
 
     def main():
-        parser = argparse.ArgumentParser(description='Domainsinffer')
+        parser = argparse.ArgumentParser(description='DomainSniffer')
         parser.add_argument('-u', metavar='url', type=str, help='enter your url')
         parser.add_argument('-k', metavar='keyword', type=str, help='enter a keyword')
-        parser.add_argument('-f', metavar='filepath', type=str, help='enter a filepath')
+        parser.add_argument('-f', metavar='filepath', type=str, help='enter a filepath', required=False)
         args = parser.parse_args()
 
         url = args.u
