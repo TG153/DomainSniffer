@@ -1,6 +1,6 @@
 ﻿# DomainSniffer
 
-#install required packages:
+##install required packages:
 pip install urllib
 pip install requests
 pip install bs4
