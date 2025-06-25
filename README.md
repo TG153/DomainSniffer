@@ -1,3 +1,1 @@
-DomainSniffer
-
-Tool to gether informations about a specified webside (subdomains).
+Tool to gather informations about a specified webside (subdomains).
